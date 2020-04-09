@@ -4,7 +4,7 @@ include('includes/config.php');
 include('includes/checklogin.php');
 check_login();
 //code for add courses
-if($_POST['submit'])
+if(isset($_POST['submit']))
 {
 $coursecode=$_POST['cc'];
 $coursesn=$_POST['cns'];

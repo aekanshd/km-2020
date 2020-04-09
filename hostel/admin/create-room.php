@@ -4,7 +4,7 @@ include('includes/config.php');
 include('includes/checklogin.php');
 check_login();
 //code for add courses
-if($_POST['submit'])
+if(isset($_POST['submit']))
 {
 $seater=$_POST['seater'];
 $roomno=$_POST['rmno'];
@@ -17,7 +17,7 @@ $stmt1->store_result();
 $row_cnt=$stmt1->num_rows;;
 if($row_cnt>0)
 {
-echo"<script>alert('Room alreadt exist');</script>";
+echo"<script>alert('Room already exist');</script>";
 }
 else
 {
@@ -69,8 +69,8 @@ echo"<script>alert('Room has been added successfully');</script>";
 									<div class="panel-body">
 									<?php if(isset($_POST['submit']))
 { ?>
-<p style="color: red"><?php echo htmlentities($_SESSION['msg']); ?><?php echo htmlentities($_SESSION['msg']=""); ?></p>
-<?php } ?>
+<p style="color: red"><?php if(isset($_SESSION['msg'])) { echo htmlentities($_SESSION['msg']); ?><?php echo htmlentities($_SESSION['msg']=""); ?></p>
+<?php } } ?>
 										<form method="post" class="form-horizontal">
 											
 											<div class="hr-dashed"></div>
@@ -78,30 +78,30 @@ echo"<script>alert('Room has been added successfully');</script>";
 												<label class="col-sm-2 control-label">Select Seater  </label>
 												<div class="col-sm-8">
 												<Select name="seater" class="form-control" required>
-<option value="">Select Seater</option>
-<option value="1">Single Seater</option>
-<option value="2">Two Seater</option>
-<option value="3">Three Seater</option>
-<option value="4">Four Seater</option>
-<option value="5">Five Seater</option>
-</Select>
-</div>
-</div>
-<div class="form-group">
-<label class="col-sm-2 control-label">Room No.</label>
-<div class="col-sm-8">
-<input type="text" class="form-control" name="rmno" id="rmno" value="" required="required">
-</div>
-</div>
-<div class="form-group">
-<label class="col-sm-2 control-label">Fee(Per Student)</label>
-<div class="col-sm-8">
-<input type="text" class="form-control" name="fee" id="fee" value="" required="required">
-</div>
-</div>
+													<option value="">Select Seater</option>
+													<option value="1">Single Seater</option>
+													<option value="2">Two Seater</option>
+													<option value="3">Three Seater</option>
+													<option value="4">Four Seater</option>
+													<option value="5">Five Seater</option>
+													</Select>
+													</div>
+													</div>
+													<div class="form-group">
+													<label class="col-sm-2 control-label">Room No.</label>
+													<div class="col-sm-8">
+													<input type="text" class="form-control" name="rmno" id="rmno" value="" required="required">
+													</div>
+													</div>
+													<div class="form-group">
+													<label class="col-sm-2 control-label">Fee(Per Student)</label>
+													<div class="col-sm-8">
+													<input type="text" class="form-control" name="fee" id="fee" value="" required="required">
+													</div>
+													</div>
 
-<div class="col-sm-8 col-sm-offset-2">
-<input class="btn btn-primary" type="submit" name="submit" value="Create Room ">
+													<div class="col-sm-8 col-sm-offset-2">
+													<input class="btn btn-primary" type="submit" name="submit" value="Create Room ">
 												</div>
 											</div>
 

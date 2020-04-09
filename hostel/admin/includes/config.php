@@ -2,6 +2,6 @@
 $dbuser="root";
 $dbpass="";
 $host="localhost";
-$db="hostel";
+$db="km2020";
 $mysqli =new mysqli($host,$dbuser, $dbpass, $db);
 ?>

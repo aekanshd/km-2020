@@ -45,7 +45,7 @@ check_login();
 						<div class="row">
 							<div class="col-md-12">
 								<div class="row">
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="panel panel-default">
 											<div class="panel-body bk-primary text-light">
 												<div class="stat-panel text-center">
@@ -59,7 +59,7 @@ check_login();
 											<a href="my-profile.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="panel panel-default">
 											<div class="panel-body bk-success text-light">
 												<div class="stat-panel text-center">
@@ -71,15 +71,21 @@ check_login();
 											<a href="room-details.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-
 								</div>
 							</div>
 						</div>
-
-
-
-
-
+						
+						<!-- <div class="row">
+							<div class="col-md-4">
+								<canvas id="dashReport"></canvas>
+							</div>
+							<div class="col-md-4">
+								<canvas id="chart-area3"></canvas>
+							</div>
+							<div class="col-md-4">
+								<canvas id="chart-area4"></canvas>
+							</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -123,11 +129,4 @@ check_login();
 	</script>
 
 </body>
-
-<div class="foot"><footer>
-<p> Brought To You By <a href="https://code-projects.org/">Code-Projects</p>
-</footer> </div>
-
-
-<style> .foot{text-align: center; border: 1px solid black;}</style>
 </html>

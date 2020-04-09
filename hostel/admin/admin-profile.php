@@ -4,7 +4,7 @@ include('includes/config.php');
 include('includes/checklogin.php');
 check_login();
 //code for update email id
-if($_POST['update'])
+if(isset($_POST['update']))
 {
 $email=$_POST['emailid'];
 $aid=$_SESSION['id'];

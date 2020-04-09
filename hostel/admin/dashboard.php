@@ -31,34 +31,28 @@ check_login();
 
 <body>
 <?php include("includes/header.php");?>
-
 	<div class="ts-main-content">
 		<?php include("includes/sidebar.php");?>
 		<div class="content-wrapper">
 			<div class="container-fluid">
-
 				<div class="row">
 					<div class="col-md-12">
-
 						<h2 class="page-title">Dashboard</h2>
-
 						<div class="row">
 							<div class="col-md-12">
 								<div class="row">
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="panel panel-default">
 											<div class="panel-body bk-primary text-light">
 												<div class="stat-panel text-center">
-
-<?php
-$result ="SELECT count(*) FROM registration ";
-$stmt = $mysqli->prepare($result);
-$stmt->execute();
-$stmt->bind_result($count);
-$stmt->fetch();
-$stmt->close();
-?>
-
+													<?php
+													$result ="SELECT count(*) FROM registration ";
+													$stmt = $mysqli->prepare($result);
+													$stmt->execute();
+													$stmt->bind_result($count);
+													$stmt->fetch();
+													$stmt->close();
+													?>
 													<div class="stat-panel-number h1 "><?php echo $count;?></div>
 													<div class="stat-panel-title text-uppercase"> Students</div>
 												</div>
@@ -66,18 +60,18 @@ $stmt->close();
 											<a href="manage-students.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="panel panel-default">
 											<div class="panel-body bk-success text-light">
 												<div class="stat-panel text-center">
-<?php
-$result1 ="SELECT count(*) FROM rooms ";
-$stmt1 = $mysqli->prepare($result1);
-$stmt1->execute();
-$stmt1->bind_result($count1);
-$stmt1->fetch();
-$stmt1->close();
-?>
+													<?php
+													$result1 ="SELECT count(*) FROM rooms ";
+													$stmt1 = $mysqli->prepare($result1);
+													$stmt1->execute();
+													$stmt1->bind_result($count1);
+													$stmt1->fetch();
+													$stmt1->close();
+													?>
 													<div class="stat-panel-number h1 "><?php echo $count1;?></div>
 													<div class="stat-panel-title text-uppercase">Total Rooms </div>
 												</div>
@@ -85,18 +79,18 @@ $stmt1->close();
 											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="panel panel-default">
 											<div class="panel-body bk-info text-light">
 												<div class="stat-panel text-center">
-<?php
-$result2 ="SELECT count(*) FROM courses ";
-$stmt2 = $mysqli->prepare($result2);
-$stmt2->execute();
-$stmt2->bind_result($count2);
-$stmt2->fetch();
-$stmt2->close();
-?>
+													<?php
+													$result2 ="SELECT count(*) FROM courses ";
+													$stmt2 = $mysqli->prepare($result2);
+													$stmt2->execute();
+													$stmt2->bind_result($count2);
+													$stmt2->fetch();
+													$stmt2->close();
+													?>
 													<div class="stat-panel-number h1 "><?php echo $count2;?></div>
 													<div class="stat-panel-title text-uppercase">Total Courses</div>
 												</div>
@@ -104,18 +98,22 @@ $stmt2->close();
 											<a href="manage-courses.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<canvas id="dashReport"></canvas>
+									</div>
+									<div class="col-md-4">
+										<canvas id="chart-area3"></canvas>
+									</div>
+									<div class="col-md-4">
+										<canvas id="chart-area4"></canvas>
+									</div>
 								</div>
 							</div>
 						</div>
-
-
-
-
-
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -156,12 +154,4 @@ $stmt2->close();
 	</script>
 
 </body>
-
-<div class="foot"><footer>
-<p> Brought To You By <a href="https://code-projects.org/">Code-Projects</p>
-</footer> </div>
-
-
-<style> .foot{text-align: center; border: 1px solid black;}</style>
-
 </html>
