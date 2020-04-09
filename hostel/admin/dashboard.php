@@ -99,6 +99,17 @@ check_login();
 										</div>
 									</div>
 								</div>
+								<div class="row mb-2x">
+									<div class="col-md-4 text-center">
+										<h1>Online Behavior</h1>
+									</div>
+									<div class="col-md-4 text-center">
+										<h1>Area Wise Allocation</h1>
+									</div>
+									<div class="col-md-4 text-center">
+										<h1>Food Behavior</h1>
+									</div>
+								</div>
 								<div class="row">
 									<div class="col-md-4">
 										<canvas id="dashReport"></canvas>
@@ -148,7 +159,7 @@ check_login();
 
 		// Dougnut Chart from doughnutData
 		var doctx = document.getElementById("chart-area4").getContext("2d");
-		window.myDoughnut = new Chart(doctx).Doughnut(doughnutData, {responsive : true});
+		window.myDoughnut = new Chart(doctx).Radar(radarData, {responsive : true});
 
 	}
 	</script>
