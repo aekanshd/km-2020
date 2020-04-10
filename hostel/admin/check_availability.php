@@ -13,7 +13,7 @@ $stmt->bind_result($count);
 $stmt->fetch();
 $stmt->close();
 if($count>0)
-echo "<span style='color:red'>$count. Seats already full.</span>";
+echo "<span style='color:red'>$count Seat(s) already full.</span>";
 else
 	echo "<span style='color:red'>All Seats are Available</span>";
 }
