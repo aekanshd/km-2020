@@ -1,6 +1,18 @@
-# Hostel Management System
+# Knowledge Mangement - Hostel Management System
 
-This project was developed for PES University's UE17CS342.
+This project was developed for PES University's **UE17CS342**.
+
+## Project Team
+1. **Kamma Sai Sahiti** - B - PES1201700802
+2. **Aekansh Dixit** - C - PES1201701808
+3. **Arumilli Meghana** - C - PES1201701279
+4. **Gagana K C** - F - PES1201802380
+
+## Project Description
+
+This project is designed to keep the record of the students living in hostel, allocation of rooms, their fees and many more things but we are trying to make this management system as much as simple and easy as we can, but we tried to cover all the basic elements use for hostel management database using KM concepts.
+
+---
 
 ## Requirements
 
@@ -21,10 +33,10 @@ This project was developed for PES University's UE17CS342.
 
 ## LOGIN DETAILS 
 
-| Login Admin | Login User |
-|-------------|------------|
+|    Login Admin    |          Login User         |
+|-------------------|-----------------------------|
 | Username: "admin" |  Username: "test@gmail.com" |
-| Password :  "Test@1234" | Password :Test@123 |  
+| Password :  "Test@1234" | Password: "Test@123"  |  
 
 ## Acknowledgement
 
